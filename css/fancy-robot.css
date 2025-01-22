@@ -2,12 +2,60 @@
 }
 
 .robot-face-shape {
+	--n: 5; /* the granularity */
+	--s: 12px; /* control the pixel size */
+	--w: 280px; /* the image size */
+
+	width: calc(round(var(--w), var(--s)) + var(--s) / 2);
+	aspect-ratio: 1;
+	background: #a5c2ed;
+	--_m: #0000
+			calc((var(--s) * (var(--n) + 0.5)) / sqrt(2)),
+		#000 0
+			calc(
+				100% - (var(--s) * (var(--n) + 0.5)) /
+					sqrt(2)
+			),
+		#0000 0;
+	clip-path: polygon(
+		50% calc(var(--s) * var(--n) - 50%),
+		calc(150% - var(--s) * var(--n)) 50%,
+		50% calc(150% - var(--s) * var(--n)),
+		calc(var(--s) * var(--n) - 50%) 50%
+	);
+	mask: repeating-conic-gradient(#0000 0 25%, #000 0 50%)
+			0 0 / var(--s) var(--s),
+		linear-gradient(-45deg, var(--_m)) intersect,
+		linear-gradient(45deg, var(--_m));
+	position: absolute;
+	top: 20%;
+	left: 35%;
 }
 
 .robot-eye-left {
+	height: 50px;
+	aspect-ratio: 1;
+	border-image: conic-gradient(#3252bd 0 0) 1 /
+		calc(50% - 15px) 35px;
+	clip-path: circle(
+
+	); /* remove this if you don't want a rounded shape */
+	position: absolute;
+	top: 20%;
+	left: 17%;
 }
 
 .robot-eye-right {
+	height: 50px;
+	aspect-ratio: 1;
+	border-image: conic-gradient(#3252bd 0 0) 1 /
+		calc(50% - 15px) 35px;
+	clip-path: circle(
+
+	); /* remove this if you don't want a rounded shape */
+	position: absolute;
+	top: 20%;
+	right: 17%;
 }
 
 .robot-ear-left {
