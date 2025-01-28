@@ -9,7 +9,7 @@
 	background-color: silver;
 	border: 3px solid black;
 	position: absolute;
-	top: 20%;
+	top: 30%;
 	left: 30%;
 	z-index: 100;
 }
@@ -19,7 +19,7 @@
 	clip-path: polygon(48% 35%, 48% 60%, 65% 49%);
 	background-color: #77b7ef;
 	position: absolute;
-	top: 20%;
+	top: 30%;
 	left: 15%;
 	z-index: 90;
 }
@@ -30,7 +30,7 @@
 	clip-path: polygon(48% 35%, 48% 60%, 33% 49%);
 	background-color: #77b7ef;
 	position: absolute;
-	top: 20%;
+	top: 30%;
 	right: 15%;
 	z-index: 90;
 }
@@ -64,7 +64,7 @@
 	height: 25px;
 	width: 15px;
 	border-radius: 50%;
-	background: hwb(350 16% 25% / 0.485);
+	background: hwb(350 16% 25% / 0.485); /* transparency */
 	position: absolute;
 	top: 50%;
 	left: 47%;
@@ -166,7 +166,7 @@
 	);
 	clip-path: ellipse(calc(var(--c) * 1%) 100% at bottom);
 	position: absolute;
-	bottom: 500px;
+	bottom: 400px;
 	left: 40%;
 	z-index: 80;
 }
